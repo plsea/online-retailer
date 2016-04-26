@@ -1,0 +1,23 @@
+window.onload = function () {
+	var oBan = document.getElementById('Banner');
+	var aImg = oBan.getElementsByTagName('img');
+
+
+	//主页banner淡入淡出
+	timer = setInterval(Auto,2000);
+
+	function Auto (){
+
+	if(iNow == aImg.length - 1){
+		iNow = 0;
+	}else{
+		iNow++;
+	}
+	for(var i = 0;i < aImg.length;i++ ){
+			fadeOut(aImg[i]);
+	}
+	fadeIn(aImg[iNow]);
+	}
+	//end banner
+
+};
